@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <div class="content">
+    <img src="assets/logo.svg" alt="Marvel" />
+
+    <form (ngSubmit)="handleSubmit()" #authForm="ngForm">
+      <input
+        name="privateKey"
+        type="text"
+        placeholder="Private key"
+        [(ngModel)]="auth.privateKey"
+        #privateKey="ngModel"
+        required
+      />
+      <span class="help-block" *ngIf="privateKey.invalid && submited"
+        >Private key é obrigatória!</span
+      >
+
+      <input
+        name="publicKey"
+        type="text"
+        placeholder="Public key"
+        [(ngModel)]="auth.publicKey"
+        #publicKey="ngModel"
+        required
+      />
+
+      <span *ngIf="publicKey.invalid && submited"
+        >Public key é obrigatória!</span
+      >
+
+      <button type="submit"  >
+        Entrar
+      </button>
+    </form>
+  </div>
+</div>
