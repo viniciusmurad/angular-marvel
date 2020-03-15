@@ -2,7 +2,7 @@
   <div class="content">
     <img src="assets/logo.svg" alt="Marvel" />
 
-    <form (ngSubmit)="handleSubmit()" #authForm="ngForm">
+    <form (ngSubmit)="handleSubmit(authForm)" #authForm="ngForm">
       <input
         name="privateKey"
         type="text"
@@ -12,7 +12,7 @@
         required
       />
       <span class="help-block" *ngIf="privateKey.invalid && submited"
-        >Private key é obrigatória!</span
+        >Private key is required!</span
       >
 
       <input
@@ -25,11 +25,11 @@
       />
 
       <span *ngIf="publicKey.invalid && submited"
-        >Public key é obrigatória!</span
+        >Public key is required!</span
       >
 
-      <button type="submit"  >
-        Entrar
+      <button type="submit">
+        Enter
       </button>
     </form>
   </div>

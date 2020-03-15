@@ -66,9 +66,13 @@ module.exports = {
             "error",
             "single"
         ],
+        "semi": [
+          "warn",
+          "always"
+        ],
         "@typescript-eslint/semi": [
-            "error",
-            "always"
+          "warn",
+          "always"
         ],
         "@typescript-eslint/unified-signatures": "error",
         "arrow-body-style": "error",

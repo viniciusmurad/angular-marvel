@@ -1,1 +1,11 @@
-<p>main works!</p>
+<div class="container">
+  <ul>
+    <div *ngFor="let item of characters?.results">
+      <app-card [data]="item"></app-card>
+    </div>
+  </ul>
+
+  <button type="submit" (click)="loadMore()">
+    Enter
+  </button>
+</div>
