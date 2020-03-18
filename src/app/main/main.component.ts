@@ -56,6 +56,5 @@ export class MainComponent implements OnInit {
   loadMore() {
     this.offSet += 5
     this.getCharacters(this.offSet)
-    console.log('loading', this.offSet)
   }
 }

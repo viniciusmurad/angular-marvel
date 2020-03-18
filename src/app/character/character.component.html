@@ -1,1 +1,33 @@
-<p>character works!</p>
+<div class="container">
+  <header>
+    <fa-icon [icon]="faArrowLeft" size="lg" (click)="goBack();"></fa-icon>
+  </header>
+  <img src="{{character.avatar}}" alt="{{character.name}}" />
+
+  <strong>{{character.name}}</strong>
+  <span>{{character.description}}</span>
+
+  <div class="list">
+    <h3>Comics</h3>
+
+    <div class="item" *ngFor="let item of comics">
+      <div class="wrapper">
+        <div class="avatar">
+          <img
+            src="{{item.avatar}}"
+            alt="{{item.title}}"
+          />
+        </div>
+        <div class="title">
+          {{item.title}}
+        </div>
+        <div class="cover">
+          {{item.issueNumber}}
+        </div>
+        <div class="description">
+          {{item.description ? item.description : 'TBA'}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

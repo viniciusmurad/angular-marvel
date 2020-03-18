@@ -12,14 +12,30 @@ export class ApiService {
   constructor(private _http: HttpClient) {}
 
   getCharacters(payload) {
-    const { privateKey, publicKey, offSet } = payload
+    const { publicKey, offSet } = payload
 
+    const hash = this.hash(payload)
+
+    const _endPoint = `characters?apikey=${publicKey}&ts=${hash.timestamp}&limit=5&offset=${offSet}&hash=${hash.hex}`
+
+    return this._http.get(`${this.url}${_endPoint}`)
+  }
+
+  getCharacter(payload) {
+    const { publicKey, id } = payload
+
+    const hash = this.hash(payload)
+
+    const _endPoint = `characters/${id}/comics?apikey=${publicKey}&ts=${hash.timestamp}&hash=${hash.hex}`
+
+    return this._http.get(`${this.url}${_endPoint}`)
+  }
+
+  hash(payload) {
+    const { privateKey, publicKey } = payload
     const timestamp = Number(new Date())
     const hash = md5.create()
     hash.update(timestamp + privateKey + publicKey)
-
-    const _endPoint = `characters?apikey=${publicKey}&ts=${timestamp}&limit=5&offset=${offSet}&hash=${hash.hex()}`
-
-    return this._http.get(`${this.url}${_endPoint}`)
+    return { hex: hash.hex(), timestamp }
   }
 }
