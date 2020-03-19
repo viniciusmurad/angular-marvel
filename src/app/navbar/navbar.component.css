@@ -1,0 +1,37 @@
+.container {
+  background: #fff;
+  padding: 0 30px;
+}
+
+.content {
+  height: 64px;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content nav {
+  display: flex;
+  align-items: center;
+}
+
+.content nav > img {
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #eee;
+  width: 90px;
+  height: 40px;
+}
+
+.content nav > a {
+  font-weight: bold;
+  color: #764ba2;
+}
+
+.content aside {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

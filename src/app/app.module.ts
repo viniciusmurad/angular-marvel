@@ -12,7 +12,8 @@ import { AppComponent } from './app.component'
 import { AuthComponent } from './auth/auth.component'
 import { MainComponent } from './main/main.component'
 import { CharacterComponent } from './character/character.component'
-import { CardComponent } from './main/card/card.component'
+import { CardComponent } from './main/card/card.component';
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CardComponent } from './main/card/card.component'
     MainComponent,
     CharacterComponent,
     CardComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

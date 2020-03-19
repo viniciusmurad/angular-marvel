@@ -12,9 +12,8 @@ export class MainComponent implements OnInit {
   characters: any
   auth: any
   offSet: number = 5
+  loaded = false;
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
     private _charactersService: CharactersService,
     private _api: ApiService
   ) {}
@@ -46,10 +45,10 @@ export class MainComponent implements OnInit {
               ...data.data,
               results: [...this.characters.results, ...data.data.results],
             }
-            console.log(newData)
             this.characters = newData
           }
         }
+        this.loaded = true;
       })
   }
 

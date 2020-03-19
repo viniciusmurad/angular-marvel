@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core'
 import { format, parseISO } from 'date-fns'
 import pt from 'date-fns/locale/pt'
 import { Router } from '@angular/router'
-import { CharactersService } from '../../characters.service'
 
 @Component({
   selector: 'app-card',

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { ApiService } from '../api.service'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { CharactersService } from '../characters.service'
 
 @Component({
   selector: 'app-character',

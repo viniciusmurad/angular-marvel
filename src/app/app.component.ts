@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { CharactersService } from './characters.service'
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,15 @@ import { Router } from '@angular/router'
 })
 export class AppComponent implements OnInit {
   title = 'angular-marvel'
-
   constructor(private router: Router) {}
 
-  ngOnInit() {
-    const auth = localStorage.getItem('auth')
-    if (auth) {
-      // this.router.navigate(['main'])
+  ngOnInit() {}
+
+  showHeader() {
+    if (this.router.url && this.router.url == '/') {
+      return false
+    } else {
+      return true
     }
   }
 }

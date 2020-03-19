@@ -5,7 +5,7 @@
     </div>
   </ul>
 
-  <button type="submit" (click)="loadMore()">
+  <button type="submit" (click)="loadMore()" *ngIf="loaded">
     Enter
   </button>
 </div>
