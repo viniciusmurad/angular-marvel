@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
-import { ToastrService } from 'ngx-toastr'
 import { Auth } from './models/auth.interface'
 import { ApiService } from '../api.service'
 import { CharactersService } from '../characters.service'
@@ -14,7 +13,6 @@ export class AuthComponent implements OnInit {
   submited: any = false
   constructor(
     private _api: ApiService,
-    private toastr: ToastrService,
     private _charactersService: CharactersService,
     private router: Router
   ) {}

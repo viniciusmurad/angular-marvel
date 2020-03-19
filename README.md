@@ -1,27 +1,46 @@
-# AngularMarvel
+# Marvel Angular
+This application provides a list of characters from marvel api and it is also possible to view the comics that each hero participated. There is a GIF at the bottom of the page for demonstration.
+I made the same web app using ReactJS, you can check click [here](https://github.com/viniciusmurad/reactjs-marvel)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+### Prerequisites
+```
+1. Node JS
+2. Angular CLI
+```
 
-## Development server
+### This app was built using:
+```
+1. Angular
+2. CSS flex box and grid
+3. Eslint
+4. Prettier
+5. NPM
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Installing
 
-## Code scaffolding
+Clone the project using
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+git clone https://github.com/viniciusmurad/angular-marvel.git
+```
+Install dependencies using:
 
-## Build
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run server using:
 
-## Running unit tests
+```bash
+ng serve -o
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The application will be available in the url:
 
-## Running end-to-end tests
+```bash
+http://localhost:4200/
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Demo
+![Demo](https://i.imgur.com/nQMyZH1.gif)

@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module'
 import { FormsModule } from '@angular/forms'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { ToastrModule } from 'ngx-toastr'
 
 import { AppComponent } from './app.component'
 import { AuthComponent } from './auth/auth.component'
@@ -29,8 +27,6 @@ import { NavbarComponent } from './navbar/navbar.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    ToastrModule.forRoot(),
     FontAwesomeModule
   ],
   providers: [],
